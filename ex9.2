@@ -1,0 +1,13 @@
+fhand = open('mbox-short.txt')
+counts = dict()
+for line in fhand:
+    line = line.strip()
+    if line.startswith('From:'):
+        continue
+    if line.startswith('From'):
+        words = line.split()
+        day = words[2]
+        counts[day] = counts.get(day,0)
+        if day in counts:
+            counts[day] = counts[day]+1
+print (counts)
