@@ -1,0 +1,32 @@
+ChildData
+-
+Name string FK >- ParentData.Child
+Age int
+Birthdate int
+Allergies string
+SpecialInstructions string
+DropOff_PickUp int
+
+ParentData
+-
+Name string
+Address string
+Child string
+CoParent string
+CarMakeModelColor string
+LicensePlate int
+DriversLicense int
+
+StaffData
+-
+Name string
+Address string
+ChildResponsibleFor string FK >- ChildData.Name
+Payrate int
+
+SchoolSuppliesData
+-
+Books int
+Tech int
+PensPencilsCrayons int
+ChildAssignedTo string FK >- ChildData.Name
